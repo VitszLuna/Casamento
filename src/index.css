@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-script: 'Great Vibes', 'Alex Brush', cursive;
+    --font-serif: 'Cormorant Garamond', 'Playfair Display', serif;
+    --font-sans: 'Montserrat', sans-serif;
+  }
+}
+
+.font-script {
+  font-family: var(--font-script);
+}
+
+.font-serif-royal {
+  font-family: var(--font-serif);
+}
+
+/* Custom Gold Foil & Romantic Gradient Text */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #d4af37 0%, #f3e5ab 50%, #aa771c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-rose-gradient {
+  background: linear-gradient(135deg, #be185d 0%, #fb7185 50%, #fda4af 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-gold-metallic {
+  background: linear-gradient(135deg, #dfa935 0%, #fceabb 50%, #c48b28 100%);
+}
+
+.bg-glass {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.bg-glass-dark {
+  background: rgba(30, 27, 27, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* 3D Envelope Perspective & Flap */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+/* Smooth Floating & Sparkle Animations */
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(2deg); }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 15px rgba(251, 113, 133, 0.4); }
+  50% { box-shadow: 0 0 30px rgba(244, 63, 94, 0.7); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.animate-float {
+  animation: floatSlow 6s ease-in-out infinite;
+}
+
+.animate-glow {
+  animation: pulseGlow 3s infinite alternate;
+}
+
+.shimmer-effect {
+  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.6) 50%, rgba(255,255,255,0) 100%);
+  background-size: 200% 100%;
+  animation: shimmer 3s infinite;
+}
+
+/* Custom romantic scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #fdf2f8;
+}
+::-webkit-scrollbar-thumb {
+  background: #f472b6;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #e11d48;
+}
